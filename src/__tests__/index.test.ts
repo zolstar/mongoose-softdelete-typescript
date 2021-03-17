@@ -19,8 +19,7 @@ const TestSchema = new Schema({
 TestSchema.plugin(softDeletePlugin);
 
 const Test = model<ISoftDeletedDocument, ISoftDeletedModel<ISoftDeletedDocument>>('Test', TestSchema);
-Test.deleteMany().then(() => {
-});
+Test.deleteMany().then();
 const test1 = new Test();
 const test2 = new Test({isDeleted: true, deletedAt: new Date()});
 const test3 = new Test({isDeleted: true, deletedAt: new Date()});
