@@ -61,6 +61,7 @@ const softDeletePlugin = (schema: Schema) => {
     return restoreQuery;
   };
 
+  // @ts-ignore
   schema.methods.softDelete = function (this: ISoftDeletedDocument, session: ClientSession) {
     this.isDeleted = true;
     this.deletedAt = new Date();
@@ -70,6 +71,7 @@ const softDeletePlugin = (schema: Schema) => {
     return this.save();
   };
 
+  // @ts-ignore
   schema.methods.restore = function (this: ISoftDeletedDocument, session: ClientSession) {
     this.isDeleted = false;
     this.deletedAt = null;

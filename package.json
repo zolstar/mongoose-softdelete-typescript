@@ -1,6 +1,6 @@
 {
   "name": "mongoose-softdelete-typescript",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Mongoose soft deletion plugin for typescript, support transaction",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -41,5 +41,9 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zolstar/mongoose-softdelete-typescript.git"
+  }
 }
